@@ -45,9 +45,13 @@ class CookieTest(pbtest.PBSeleniumTest):
 	PB after each of the site loads, but no action will be taken. Then the first 
 	site will be reloaded, and the UI will show the third party cookie as blocked."""
 
-	print "+++++++++++++IN TRAVIS TEST CODE ++++++++++++++++"
+	print "\n\n+++++++++++++ IN TRAVIS TEST CODE ++++++++++++++++\n\n"
         self.driver.get( PB_CHROME_SITE1_URL )
 	self.js("return new Date();")
+	window_utils.switch_to_window_with_url( self.driver, PB_CHROME_SITE1_URL )
+	button = self.driver.find_element_by_id("newwindowbutton")
+	button.click()
+	print "\n\n+++++++++++++ END TRAVIS TEST CODE ++++++++++++++++\n\n"
 	return;
 
 	self.driver.delete_all_cookies()
