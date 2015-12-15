@@ -49,8 +49,11 @@ class CookieTest(pbtest.PBSeleniumTest):
         self.driver.get( PB_CHROME_SITE1_URL )
 	self.js("return new Date();")
 	window_utils.switch_to_window_with_url( self.driver, PB_CHROME_SITE1_URL )
+	print "current url: " + self.driver.current_url
 	button = self.driver.find_element_by_id("newwindowbutton")
 	button.click()
+	window_utils.switch_to_window_with_url( self.driver, "about:blank" )
+	print "current url: " + self.driver.current_url
 	print "\n\n+++++++++++++ END TRAVIS TEST CODE ++++++++++++++++\n\n"
 	return;
 
