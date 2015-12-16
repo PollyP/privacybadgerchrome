@@ -61,14 +61,15 @@ class CookieTest(pbtest.PBSeleniumTest):
 	print "switching to popup"
 	window_utils.switch_to_window_with_url( self.driver, PB_CHROME_PU_URL )
 	print "current url: " + self.driver.current_url
-	time.sleep(60)
+	#time.sleep(60)
 	print "going to call some js"
 	output = self.driver.execute_script("return typeof getBaseDomain;")
 	#output = self.driver.execute_script("return document.title;")
 	print str(output)
 	output = self.driver.execute_script("return typeof setTabToUrl;")
 	print str(output)
-	output = self.driver.execute_script("return setTabToUrl('http://eff-tracker-site1-test.s3-website-us-west-2.amazonaws.com');")
+	output = self.driver.execute_script("return xxx('http://eff-tracker-site1-test.s3-website-us-west-2.amazonaws.com');")
+	#output = self.driver.execute_script("return setTabToUrl('http://eff-tracker-site1-test.s3-website-us-west-2.amazonaws.com');")
 	print str(output)
 	print "\n\n+++++++++++++ END TRAVIS TEST CODE ++++++++++++++++\n\n"
 	return;
