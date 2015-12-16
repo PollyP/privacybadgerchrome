@@ -61,6 +61,7 @@ class CookieTest(pbtest.PBSeleniumTest):
 	print "switching to popup"
 	window_utils.switch_to_window_with_url( self.driver, PB_CHROME_PU_URL )
 	print "current url: " + self.driver.current_url
+	time.sleep(10)
 	print "going to call some js"
 	output = self.driver.execute_script("return typeof getBaseDomain;")
 	#output = self.driver.execute_script("return document.title;")
