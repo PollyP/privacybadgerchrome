@@ -64,7 +64,7 @@ class CookieTest(pbtest.PBSeleniumTest):
 	print "going to call some js"
 	output = self.driver.execute_script("return typeof setTabToUrl;")
 	print str(output)
-	output = self.driver.execute_script("return typeof window.chrome;")
+	output = self.driver.execute_script("return typeof window.chrome.runtime;")
 	#output = self.driver.execute_script("return window.navigator.vendor;")
 	#output = self.driver.execute_script("return window.navigator.platform;")
 	#output = self.driver.execute_script("return window.chrome.runtime.id;")
