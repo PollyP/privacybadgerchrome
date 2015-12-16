@@ -736,7 +736,7 @@ function setTabToUrl( query_url ) {
 
 function xxx( query_url ) {
   //chrome.tabs.query( {url: query_url} );
-  chrome.tabs.getCurrent(function(Tab tab) { });
+  //chrome.tabs.getCurrent(function(Tab tab) { });
   return 7;
 }
 
