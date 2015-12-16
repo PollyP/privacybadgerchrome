@@ -15,5 +15,6 @@ else
     wget -O /tmp/chromedriver.zip "https://chromedriver.storage.googleapis.com/$version/chromedriver_linux$bits.zip"
     sudo unzip /tmp/chromedriver.zip chromedriver -d /usr/local/bin/
     sudo chmod a+x /usr/local/bin/chromedriver
-    google-chrome --version
+    #google-chrome --version
+    chromium-browser --version
 fi
