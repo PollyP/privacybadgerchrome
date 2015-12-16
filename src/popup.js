@@ -735,6 +735,9 @@ function setTabToUrl( query_url ) {
 }
 
 function xxx( query_url ) {
+  chrome.tabs.query( {url: query_url}, function(ta) {
+	var z = 3;
+  });
   return 7;
 }
 
