@@ -48,15 +48,20 @@ class CookieTest(pbtest.PBSeleniumTest):
 	print "\n\n+++++++++++++ IN TRAVIS TEST CODE ++++++++++++++++\n\n"
         self.driver.get( PB_CHROME_SITE1_URL )
 	self.js("return new Date();")
+	print "switching to site 1"
 	window_utils.switch_to_window_with_url( self.driver, PB_CHROME_SITE1_URL )
 	print "current url: " + self.driver.current_url
 	button = self.driver.find_element_by_id("newwindowbutton")
 	button.click()
+	print "switching to new tab"
 	window_utils.switch_to_window_with_url( self.driver, "about:blank" )
 	print "current url: " + self.driver.current_url
+	print "getting popup "
 	self.driver.get(PB_CHROME_PU_URL)
+	print "switching to popup"
 	window_utils.switch_to_window_with_url( self.driver, PB_CHROME_PU_URL )
 	print "current url: " + self.driver.current_url
+	print "going to call some js"
 	self.js("return getBaseDomain('www.google.com');")
 	print "\n\n+++++++++++++ END TRAVIS TEST CODE ++++++++++++++++\n\n"
 	return;
