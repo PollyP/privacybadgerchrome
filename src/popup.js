@@ -734,6 +734,10 @@ function setTabToUrl( query_url ) {
   return;
 }
 
+function xxx( query_url ) {
+  retrun 7;
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   chrome.tabs.getSelected(null, function(tab) {
     console.log("from addEventListener");
