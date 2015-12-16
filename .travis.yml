@@ -8,6 +8,6 @@ install:
 before_script:
   - sh -x ./setup_travis.sh
   - cd tests
-  - /usr/local/bin/chromedriver --version
-  - google-chrome --version
+  - echo `/usr/local/bin/chromedriver --version`
+  - echo `google-chrome --version`
 script:  ./run_selenium_tests.sh
