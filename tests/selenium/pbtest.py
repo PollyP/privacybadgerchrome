@@ -56,8 +56,8 @@ class PBSeleniumTest(unittest.TestCase):
         """Setup and return a Chrom[e|ium] browser for Selenium."""
         opts = Options()
         absp = os.path.abspath
-        #if "TRAVIS" in os.environ:  # github.com/travis-ci/travis-ci/issues/938
-        #    opts.add_argument("--no-sandbox")
+        if "TRAVIS" in os.environ:  # github.com/travis-ci/travis-ci/issues/938
+            opts.add_argument("--no-sandbox")
         opts.add_extension(self.pb_ext_path)  # will fail if ext can't be found
         if self.browser_bin:  # otherwise will use webdriver's default binary
             print "Browser binary:", absp(self.browser_bin)
