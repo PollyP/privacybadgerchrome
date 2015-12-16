@@ -6,6 +6,6 @@ install:
   - sudo apt-get -qq install xvfb python-virtualenv
   - npm install
 before_script:
-  - ./setup_travis.sh
+  - sh -x ./setup_travis.sh
   - cd tests
 script:  ./run_selenium_tests.sh
