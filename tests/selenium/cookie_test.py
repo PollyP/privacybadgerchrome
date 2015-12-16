@@ -62,7 +62,7 @@ class CookieTest(pbtest.PBSeleniumTest):
 	window_utils.switch_to_window_with_url( self.driver, PB_CHROME_PU_URL )
 	print "current url: " + self.driver.current_url
 	time.sleep(30);
-	print "going to call some js"
+	print "going to call some js rn"
 	output = self.driver.execute_script("return typeof setTabToUrl;")
 	print str(output)
 	output = self.driver.execute_script("return window.chrome.runtime.id;")
