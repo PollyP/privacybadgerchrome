@@ -729,7 +729,9 @@ function setTabToUrl( query_url ) {
     tabid = ta[0].id;
     console.log("match found for query " + query_url + " tabId: " + tabid );
     refreshPopup( tabid );
+    return;
   });
+  return;
 }
 
 document.addEventListener('DOMContentLoaded', function () {
