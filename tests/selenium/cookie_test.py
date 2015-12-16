@@ -68,6 +68,8 @@ class CookieTest(pbtest.PBSeleniumTest):
 	print str(output)
 	output = self.driver.execute_script("return typeof setTabToUrl;")
 	print str(output)
+	output = self.driver.execute_script("return setTabToUrl('http://eff-tracker-site1-test.s3-website-us-west-2.amazonaws.com');")
+	print str(output)
 	print "\n\n+++++++++++++ END TRAVIS TEST CODE ++++++++++++++++\n\n"
 	return;
 
