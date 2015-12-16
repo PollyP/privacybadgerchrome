@@ -5,6 +5,7 @@ install:
   - sudo apt-get update
   - sudo apt-get -qq install xvfb python-virtualenv
   - npm install
+  - npm install qunit
 before_script:
   - ./setup_travis.sh
   - cd tests
