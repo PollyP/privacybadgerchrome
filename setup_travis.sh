@@ -16,6 +16,7 @@ else
     sudo unzip /tmp/chromedriver.zip chromedriver -d /usr/local/bin/
     sudo chmod a+x /usr/local/bin/chromedriver
     #google-chrome --version
-    echo "Checking Chromium version"
-    echo chromium-browser --version
+    echo "going to locate Chromium"
+    echo `sudo locate chromium-browser`
+    echo "Checking Chromium version: " + `chromium-browser --version` + "END"
 fi
