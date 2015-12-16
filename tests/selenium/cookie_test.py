@@ -62,8 +62,8 @@ class CookieTest(pbtest.PBSeleniumTest):
 	window_utils.switch_to_window_with_url( self.driver, PB_CHROME_PU_URL )
 	print "current url: " + self.driver.current_url
 	print "going to call some js"
-	output = self.driver.execute_script("return document.title;")
-
+	output = self.driver.execute_script("return typeof getBaseDomain;")
+	#output = self.driver.execute_script("return document.title;")
 	print str(output)
 	print "\n\n+++++++++++++ END TRAVIS TEST CODE ++++++++++++++++\n\n"
 	return;
