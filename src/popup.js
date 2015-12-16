@@ -735,7 +735,7 @@ function setTabToUrl( query_url ) {
 }
 
 function xxx( query_url ) {
-  retrun 7;
+  return 7;
 }
 
 document.addEventListener('DOMContentLoaded', function () {
