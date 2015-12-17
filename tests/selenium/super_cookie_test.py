@@ -13,6 +13,7 @@ class SuperCookieTest(pbtest.PBSeleniumTest):
         """Check if the given origin has supercookies in PB's localStorage."""
         self.driver.get(pbtest.PB_CHROME_BG_URL)
         get_sc_domains_js = "return localStorage.getItem('supercookieDomains')"
+
         supercookieDomains = json.loads(self.js(get_sc_domains_js))
 	print "looking for " + origin + " in supercookie domains: " + str(supercookieDomains)
         return origin in supercookieDomains
