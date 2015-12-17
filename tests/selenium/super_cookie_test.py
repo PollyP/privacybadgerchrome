@@ -14,6 +14,7 @@ class SuperCookieTest(pbtest.PBSeleniumTest):
         self.driver.get(pbtest.PB_CHROME_BG_URL)
         get_sc_domains_js = "return localStorage.getItem('supercookieDomains')"
         supercookieDomains = json.loads(self.js(get_sc_domains_js))
+	print "supercookie domains: " + str(supercookieDomains)
         return origin in supercookieDomains
 
     # localStorage (ls) tests
